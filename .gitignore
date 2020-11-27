@@ -1,0 +1,10 @@
+__pycache__
+log/
+test/
+data*/
+dump_*/
+.idea
+*.swp
+*.swo
+*.swn
+*.gz
