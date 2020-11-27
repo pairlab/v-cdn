@@ -72,7 +72,7 @@ You will need to download the data from the followings links.
 - Ball [[DropBox]](https://www.dropbox.com/s/flk4rzt5sa6tbu5/data_Ball.zip?dl=0) (3.53GB)
 - Cloth [[DropBox]](https://www.dropbox.com/s/dd75rt9nhszgi97/data_Cloth.zip?dl=0) (15.06GB)
 
-The organization of the codebase should follow the following structure
+The organization of the codebase should follow the following structure, where `data_{enc}/` contains the raw images and metadata for each episode, `data_{env}_nKp_*/` contains pre-stored keypoints detected by the pretrained perception module.
 
     - v-cdn/
         - data/
@@ -92,7 +92,7 @@ The organization of the codebase should follow the following structure
         - data.py
         ...
 
-The following scripts generate and store the keypoints to `data/data_{env}_nKp_*/` using the pretrained unsupervised keypoint detection model. It will speed up the training process of the discovery and the dynamics modules.
+The following scripts generate and store the keypoints to `data/data_{env}_nKp_*/` using the pretrained unsupervised keypoint detection model. It will speed up the training process of the discovery and the dynamics modules. You can switch the option `--eval_set` from `valid` to `train`, and `--store_ed_idx` to an appropriate number to generate files for different data partitions.
 
     bash scripts/eval_Ball_kp.sh
     bash scripts/eval_Cloth_kp.sh
@@ -112,9 +112,9 @@ The following scripts train the perception module for unsupervised keypoint dete
     bash scripts/train_Ball_kp.sh
     bash scripts/train_Cloth_kp.sh
 
-The following scripts train the discovery and the dynamics modules together. It will speed up the training process if you first store the detected keypoints using the scripts in the previous section. You can switch the option `--eval_set` from `valid` to `train`, and `--store_ed_idx` to an appropriate number to generate files for different data partitions.
+The following scripts train the discovery and the dynamics modules together. It will speed up the training process if you load from pre-stored keypoints. `data_{env}_nKp_*/` in the downloaded data contains pre-stored keypoints detected using our pretrained perception module. You can also regenerate the keypoints following the instructions in the previous section.
 
-When training the discovery and the dynamics modules using the following scripts, setting the option `--preload_kp` as `1` allow the script to load the stored keypoints.
+When training the discovery and the dynamics modules using the following scripts, set the option `--preload_kp` as `1` to allow the script to load the stored keypoints.
 
     bash scripts/train_Ball_dy.sh
     bash scripts/train_Cloth_dy.sh
