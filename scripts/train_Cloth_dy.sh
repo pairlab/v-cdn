@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=0 \
 	python train_dy.py \
 	--env Cloth \
 	--stage dy \
-	--baseline 1 \
+	--baseline 0 \
 	--gauss_std 5e-2 \
 	--lam_kp 1e1 \
 	--en_model cnn \
@@ -20,7 +20,7 @@ CUDA_VISIBLE_DEVICES=0 \
 	--edge_attr_dim 1 \
 	--edge_type_num 2 \
 	--edge_st_idx 1 \
-	--edge_share 1 \
+	--edge_share 0 \
 	--batch_size 8 \
 	--lr 5e-4 \
 	--gen_data 0 \
