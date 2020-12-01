@@ -3,7 +3,7 @@
 Yunzhu Li, Antonio Torralba, Animashree Anandkumar, Dieter Fox, and Animesh Garg
 
 **NeurIPS 2020**
-[[website]](https://yunzhuli.github.io/V-CDN/) [[arXiv]](https://arxiv.org/abs/2007.00631) [[video]](https://youtu.be/KnLyonKbymE)
+[[website]](https://yunzhuli.github.io/V-CDN/) [[arXiv]](https://arxiv.org/abs/2007.00631) [[video]](https://www.youtube.com/watch?v=hRsCt8xLn_8)
 
 
 Demo
