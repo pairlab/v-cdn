@@ -8,3 +8,6 @@ dump_*/
 *.swo
 *.swn
 *.gz
+
+.ipynb_checkpoints/
+demo_video/data/
