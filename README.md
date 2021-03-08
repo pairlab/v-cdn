@@ -69,8 +69,12 @@ The following scripts perform unsupervised keypoint detection, then discover the
 Evaluation Using Pre-trained Models
 -------------
 You will need to download the data from the followings links.
-- Ball [[DropBox]](https://www.dropbox.com/s/flk4rzt5sa6tbu5/data_Ball.zip?dl=0) (3.53GB)
-- Cloth [[DropBox]](https://www.dropbox.com/s/dd75rt9nhszgi97/data_Cloth.zip?dl=0) (15.06GB)
+- Ball (3.53GB)
+    - [[DropBox]](https://www.dropbox.com/s/flk4rzt5sa6tbu5/data_Ball.zip?dl=0)
+    - [[Baidu Wangpan]](https://pan.baidu.com/s/1uT2ibjpQsejhs69MlaZysA) (Access Code: 7g9i)
+- Cloth (15.06GB)
+    - [[DropBox]](https://www.dropbox.com/s/dd75rt9nhszgi97/data_Cloth.zip?dl=0)
+    - [[Baidu Wangpan]](https://pan.baidu.com/s/1ih00UQ_YAklJbwkPe4-L_A) (Access Code: 2kii)
 
 The organization of the codebase should follow the following structure, where `data_{enc}/` contains the raw images and metadata for each episode, `data_{env}_nKp_*/` contains pre-stored keypoints detected by the pretrained perception module.
 
